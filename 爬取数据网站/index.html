@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="TypeScript爬虫项目测试数据网站">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <title>TypeScript爬虫项目测试数据网站</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TypeScript爬虫项目测试数据网站</h1>
+        </div>
+        <div class="content">
+            <div>
+                <a href="https://coding.imooc.com/class/203.html" class="course-link" target="_blank">
+                    <div class="course-item">
+                        <img class="course-img" src="images/vue.jpeg">
+                        <p class="course-desc">Vue2.5开发去哪儿网App 从零基础入门到实战项目</p>
+                        <p>当前课程学习人数: <span id="num1"></span></p>
+                    </div>
+                </a>
+                <a href="https://coding.imooc.com/class/229.html" class="course-link" target="_blank">
+                    <div class="course-item">
+                        <img class="course-img" src="images/react.jpeg">
+                        <p class="course-desc">React 16.4 开发简书项目 从零基础入门到实战</p>
+                        <p>当前课程学习人数: <span id="num2"></span></p>
+                    </div>
+                </a>
+                <a href="https://coding.imooc.com/class/276.html" class="course-link" target="_blank">
+                    <div class="course-item">
+                        <img class="course-img" src="images/ssr.jpeg">
+                        <p class="course-desc">Vue2.5开发去哪儿网App 从零基础入门到实战项目</p>
+                        <p>当前课程学习人数: <span id="num3"></span></p>
+                    </div>
+                </a>
+                <a href="https://coding.imooc.com/class/316.html" class="course-link" target="_blank">
+                    <div class="course-item">
+                        <img class="course-img" src="images/webpack.jpeg">
+                        <p class="course-desc">从基础到实战 手把手带你掌握新版Webpack4.0</p>
+                        <p>当前课程学习人数: <span id="num4"></span></p>
+                    </div>
+                </a>
+                <a href="/financing" class="course-link">
+                    <div class="course-item">
+                        <img class="course-img" src="images/money.jpeg">
+                        <p class="course-desc">Dell Lee 的微课堂，职业规划答疑解惑，精彩文章与你分享</p>
+                        <p>当前课程学习人数: <span id="num5"></span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function randomNum(minNum,maxNum){ 
+        switch(arguments.length){ 
+         case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+            break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+        default: 
+            return 0; 
+        break; 
+        }    
+    } 
+    var num1 = randomNum(1,100)
+    var num2 = randomNum(1,300)
+    var num3 = randomNum(1,500)
+    var num4 = randomNum(1,800)
+    var num5 = randomNum(1,1000)
+    document.getElementById('num1').innerText = num1;
+    document.getElementById('num2').innerText = num2;
+    document.getElementById('num3').innerText = num3;
+    document.getElementById('num4').innerText = num4;
+    document.getElementById('num5').innerText = num5;
+</script>
+</html>
