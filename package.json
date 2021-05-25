@@ -4,9 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "ts-node ./src/crowller.ts",
-        "build": "tsc -w",
-        "start": "nodemon node ./build/crowller.js"
+        "dev": "concurrently npm:dev:*",
+        "dev:build": "tsc -w",
+        "dev:start": "nodemon node ./build/crowller.js"
     },
     "nodemonConfig": {
         "ignore": [
@@ -20,6 +20,7 @@
         "@types/cheerio": "^0.22.14",
         "@types/superagent": "^4.1.11",
         "cheerio": "^1.0.0-rc.9",
+        "concurrently": "^6.2.0",
         "nodemon": "^2.0.7",
         "ts-node": "^8.5.2",
         "typescript": "^3.7.2"
