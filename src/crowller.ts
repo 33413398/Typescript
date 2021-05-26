@@ -60,7 +60,7 @@ class crowller {
   }
   // 存储数据
   saveItem(data:ItemObj){
-    const filePath = path.join(__dirname,'./data/dest.json')
+    const filePath = path.join(__dirname,'../data/dest.json')
     // 文件内容
     let fileContent:Content = {}
     if(fs.existsSync(filePath)) {
@@ -73,4 +73,5 @@ class crowller {
 }
 
 // 实例化类
-const crwller = new crowller()
+// const crwller = new crowller()
+export default crowller;
